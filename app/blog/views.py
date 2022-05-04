@@ -16,5 +16,7 @@ def article(request, article_id):
     return render(request, 'blog/article.html', {'article_id': article_id})
     # return HttpResponse(f"{article_id}")
 
+
 def getRes(request):
-    pass
+    userMsg = request.GET.get('userMsg')
+    return HttpResponse(userMsg)

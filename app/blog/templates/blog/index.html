@@ -29,13 +29,13 @@ function getUserRes(){
     $("#hiCB").append(uh);
 
     $.get('/blog/getRes',{userMsg:ut}).done(function(data){
-
-    })
+        let uh="<p>"+data+"</p>"  ;
+        $("#hiCB").append(uh);
+    });
 
 }
 
 $('#hiBtn').click(function(){
-    alert('me');
     getUserRes();
 })
 

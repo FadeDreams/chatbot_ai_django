@@ -5,7 +5,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('specific/', views.specific, name='specific'),
     path('article/<int:article_id>', views.article, name='article'),
-    path('getRes',views.getRes,"getRes"),
+    path('getRes', views.getRes, name="getRes"),
     
 ]
 
