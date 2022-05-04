@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+<body>
+<h1>Chatbot</h1>
+
+<div>
+    <div id="hiCB">
+        <p>Hi there</p>
+    </div>
+
+    <div id="hiIN">
+        <input type="text" id="hiTxt" name="hnTxt"  />
+        <input type="submit" id="hiBtn" value="Send" />
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+<script>
+function getUserRes(){
+    let ut=$('#hiTxt').val();
+    let uh="<p>"+ut+"</p>"  ;
+    //test713
+    $("hiTxt").val("");
+    $("#hiCB").append(uh);
+
+    $.get('/blog/getRes',{userMsg:ut}).done(function(data){
+
+    })
+
+}
+
+$('#hiBtn').click(function(){
+    alert('me');
+    getUserRes();
+})
+
+</script>
+
+</body>
+</html>
